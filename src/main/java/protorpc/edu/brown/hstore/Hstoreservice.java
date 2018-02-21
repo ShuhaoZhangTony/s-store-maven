@@ -32,7 +32,6 @@
 
 package protorpc.edu.brown.hstore;
 
-import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.Message;
 
 public final class Hstoreservice {
@@ -1319,7 +1318,7 @@ public final class Hstoreservice {
       initFields();
     }
     private WorkResult(boolean noInit) {}
-    
+
     private static final WorkResult defaultInstance;
     public static WorkResult getDefaultInstance() {
       return defaultInstance;
@@ -17063,14 +17062,16 @@ public final class Hstoreservice {
               new String[] { "PartitionId", "FragmentId", "InputDepId", "OutputDepId", "ParamIndex", "StmtCounter", "StmtIndex", "StmtIgnore", "ReadOnly", "NeedsInput", "LastFragment", "Prefetch", "Force", "FutureStatements", },
               protorpc.edu.brown.hstore.Hstoreservice.WorkFragment.class,
               protorpc.edu.brown.hstore.Hstoreservice.WorkFragment.Builder.class);
+
           internal_static_edu_brown_hstore_WorkResult_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_edu_brown_hstore_WorkResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_edu_brown_hstore_WorkResult_descriptor,
-              new String[] { "PartitionId", "DepId", "DepData", "Status", "dbError", },
+              new String[] { "PartitionId", "DepId", "DepData", "Status", "Error", },
               protorpc.edu.brown.hstore.Hstoreservice.WorkResult.class,
               protorpc.edu.brown.hstore.Hstoreservice.WorkResult.Builder.class);
+
           internal_static_edu_brown_hstore_QueryEstimate_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_edu_brown_hstore_QueryEstimate_fieldAccessorTable = new
@@ -17164,7 +17165,7 @@ public final class Hstoreservice {
           internal_static_edu_brown_hstore_TransactionReduceResponse_ReduceResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_edu_brown_hstore_TransactionReduceResponse_ReduceResult_descriptor,
-              new String[] { "PartitionId", "Data", "Status", "dbError", },
+              new String[] { "PartitionId", "Data", "Status", "Error", },
               protorpc.edu.brown.hstore.Hstoreservice.TransactionReduceResponse.ReduceResult.class,
               protorpc.edu.brown.hstore.Hstoreservice.TransactionReduceResponse.ReduceResult.Builder.class);
           internal_static_edu_brown_hstore_TransactionPrepareRequest_descriptor =
@@ -17268,7 +17269,7 @@ public final class Hstoreservice {
           internal_static_edu_brown_hstore_ShutdownPrepareRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_edu_brown_hstore_ShutdownPrepareRequest_descriptor,
-              new String[] { "SenderSite", "dbError", },
+              new String[] { "SenderSite", "Error", },
               protorpc.edu.brown.hstore.Hstoreservice.ShutdownPrepareRequest.class,
               protorpc.edu.brown.hstore.Hstoreservice.ShutdownPrepareRequest.Builder.class);
           internal_static_edu_brown_hstore_ShutdownPrepareResponse_descriptor =
@@ -17335,6 +17336,7 @@ public final class Hstoreservice {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           protorpc.ca.evanjones.protorpc.Protocol.getDescriptor(),
         }, assigner);
+
   }
   
   public static void internalForceInit() {}
